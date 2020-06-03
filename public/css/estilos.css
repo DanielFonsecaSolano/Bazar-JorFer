@@ -1,0 +1,60 @@
+html{
+    min-height: 100%;
+    position: relative;
+}
+
+/* Navbar */
+/*.navbar {
+    z-index: 999;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.navbar-brand{
+    height: 5em;
+    color: white !important;
+}
+
+li{
+    font-size: 2em;
+}*/
+
+/*Varios títulos*/
+h1{
+    margin-bottom: 1em;
+}
+
+/*Cuerpo*/
+body{
+    background: white;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    overflow-x: hidden;
+    padding-top: 7em;
+}
+
+.formulario{
+    padding-left: 30%; 
+    padding-right: 30%; 
+    padding-top: 5em;
+    display: block;
+}
+
+.lbl{
+    width: 11em;
+}
+
+
+
+.formularioPago{
+    padding-top: 5em;
+}
+
+/*Contacto y Footer*/
+#contacto{
+    margin-top: 3em;
+    background-color: gray;
+}
