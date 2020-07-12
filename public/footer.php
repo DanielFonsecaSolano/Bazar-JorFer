@@ -15,7 +15,7 @@
                             </div>
                             <div class="footer-tittle">
                                 <div class="footer-pera">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore.</p>
+                                    <p>Somos una tienda totalmente independiente, nos dedicamos a todo tipo de confecciones.</p>
                                 </div>
                             </div>
                         </div>
@@ -24,12 +24,12 @@
                 <div class="col-xl-2 col-lg-3 col-md-3 col-sm-5">
                     <div class="single-footer-caption mb-50">
                         <div class="footer-tittle">
-                            <h4>Quick Links</h4>
+                            <h4>Enlaces rápidos</h4>
                             <ul>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#"> Offers & Discounts</a></li>
-                                <li><a href="#"> Get Coupon</a></li>
-                                <li><a href="#">  Contact Us</a></li>
+                                <li><a href="#">Sobre Nostros</a></li>
+                                <li><a href="#"> Ofertas & Descuentos</a></li>
+                         
+                                <li><a href="#">  Contactenos</a></li>
                             </ul>
                         </div>
                     </div>
@@ -37,12 +37,11 @@
                 <div class="col-xl-3 col-lg-3 col-md-4 col-sm-7">
                     <div class="single-footer-caption mb-50">
                         <div class="footer-tittle">
-                            <h4>New Products</h4>
+                            <h4>Nuevos Productos</h4>
                             <ul>
-                                <li><a href="#">Woman Cloth</a></li>
-                                <li><a href="#">Fashion Accessories</a></li>
-                                <li><a href="#"> Man Accessories</a></li>
-                                <li><a href="#"> Rubber made Toys</a></li>
+                                <li><a href="#">Cátalogo de Productos</a></li>
+                                <li><a href="#">Otras Utilidades</a></li>
+                                <li><a href="#">Accesorios</a></li>
                             </ul>
                         </div>
                     </div>
@@ -52,11 +51,10 @@
                         <div class="footer-tittle">
                             <h4>Soporte</h4>
                             <ul>
-                                <li><a href="#">Frequently Asked Questions</a></li>
-                                <li><a href="#">Terms & Conditions</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Report a Payment Issue</a></li>
+                                <li><a href="#">Preguntas Frecuentes</a></li>
+                                <li><a href="#">Temas & Condiciones</a></li>
+                                <li><a href="#">Politicas de Privacidad</a></li>
+                                
                             </ul>
                         </div>
                     </div>
@@ -67,7 +65,7 @@
                 <div class="col-xl-7 col-lg-7 col-md-7">
                     <div class="footer-copy-right">
                         <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados <i class="ti-heart" aria-hidden="true"></i> 
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>                   </div>
                 </div>
                 <div class="col-xl-5 col-lg-5 col-md-5">
