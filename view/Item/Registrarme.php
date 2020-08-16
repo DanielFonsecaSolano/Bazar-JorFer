@@ -12,7 +12,7 @@ include_once 'public/header.php';
             <div class="row">
                 <div class="col-xl-12">
                     <div class="hero-cap text-center">
-                        <h2>¡Registrate!</h2>
+                        <h2>Registrate, es gratis.</h2>
                     </div>
                 </div>
             </div>
@@ -41,48 +41,56 @@ include_once 'public/header.php';
                     <div class="login_part_form_iner">
                       
                             <h3><center>
-                            ¡Registrate a BazarFer!</center></h3>
-                        <div  name="alertControl"></div>
+                            Registrate en nuestro BazarFer</center></h3>
 
                         <form  class="row contact_form" id="formularioUsuario" method="post" autocomplete="off" 
                                class="form" enctype="multipart/form-data">
-                            <div class="col-md-12 form-group p_star">
-                                <input type="hidden" class="form-control" id="id_rol" name="id_rol" value="2"
-                                       placeholder="Rol">
-                            </div>
+                            
+                               <div class="col-md-12 form-group p_star">
+                                <span id="error" name="error"> </span>
+
+                            <br>
+                                    </div>
                             <div class="col-md-12 form-group p_star">
                                 <input type="text" class="form-control" id="cedula_usuario" name="cedula_usuario" value=""
-                                       placeholder="Cédula">
+                                       placeholder="Cédula" >
+                                
+                             
                             </div>
+                            <br> <br>
                             <div class="col-md-12 form-group p_star">
                                 <input type="text" class="form-control" id="telefono_usuario" name="telefono_usuario" value=""
                                        placeholder="Telefono">
+                                  
                             </div>
+                               <br> <br>
                             <div class="col-md-12 form-group p_star">
                                 <input type="text" class="form-control" id="nombre_usuario" name="nombre_usuario" value=""
                                        placeholder="Nombre">
-                            </div>
+                            </div>   <br> <br>
                             <div class="col-md-12 form-group p_star">
                                 <input type="text" class="form-control" id="apellido_usuario" name="apellido_usuario" value=""
                                        placeholder="Apellido">
-                            </div>
+                            </div>   <br> <br>
                             <div class="col-md-12 form-group p_star">
                                 <input type="text" class="form-control" id="direccion_usuario" name="direccion_usuario" value=""
                                        placeholder="Dirección">
-                            </div>
+                            </div>   <br> <br>
                             <div class="col-md-12 form-group p_star">
-                                <input type="email" class="form-control" id="correo_usuario" name="correo_usuario" value=""
+                                <input type="text" class="form-control" id="correo_usuario" name="correo_usuario" value=""
                                        placeholder="Correo">
-                            </div>
+                            </div>   <br> <br>
                             <div class="col-md-12 form-group p_star">
                                 <input type="password" class="form-control" id="contrasenia_usuario" name="contrasenia_usuario" value=""
                                        placeholder="Contraseña">
-                            </div>
+                            </div>   <br> <br>
                             <div class="col-md-12 form-group">
-                                <div class="creat_account d-flex align-items-center">
-                                    <input type="checkbox" id="f-option" name="selector">
-                                    <label for="f-option">Recordar</label>
-                                </div>
+                                 <input type="hidden" class="form-control" id="id_rol" name="id_rol" value="2"
+                                       
+                                       
+                                       
+                                       
+                                       placeholder="Rol">
                                 <button type="submit" value="submit" class="btn_3">
                                     Registrarme
                                 </button>

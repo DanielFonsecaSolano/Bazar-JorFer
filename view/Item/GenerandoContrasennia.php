@@ -12,7 +12,7 @@ include_once 'public/header.php';
             <div class="row">
                 <div class="col-xl-12">
                     <div class="hero-cap text-center">
-                        <h2>Iniciar Sesion</h2>
+                        <h2>Generar nueva contraseña</h2>
                     </div>
                 </div>
             </div>
@@ -28,42 +28,44 @@ include_once 'public/header.php';
             <div class="col-lg-6 col-md-6">
                 <div class="login_part_text text-center">
                     <div class="login_part_text_iner">
-                        <h2>¿Ya tienes una cuenta?</h2>
-                        <p>Genial! Podrás recibir y dar un vistazo a las mejores confecciones que hemos realizado!</p>
-                        <a href="#" class="btn_3">Inicia sesión -></a>
+                        <h2>¿Olvidaste tu contraseña?</h2>
+                        <p>Escribí tu correo electrónico, y te creamos una nueva clave!</p>
+                        <a href="#" class="btn_3"> -></a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-6 col-md-6">
                 <div class="login_part_form">
                     <div class="login_part_form_iner">
-                        <h3><center>Iniciar sesion !</center>  </h3>
+                        <h3><center>Generando nueva contraseña !</center>  </h3>
 
-                        <form class="row contact_form" id="autenticacion_usuario" method="post" autocomplete="off" 
-                              enctype="multipart/form-data"> 
-                          
+                        <form class="row contact_form" id="confirmar_contrasennia" method="post" autocomplete="off" 
+                               class="form" enctype="multipart/form-data">
                             <div class="col-md-12 form-group p_star">
-                                <span id="error2" name="error2"> </span>
+                                <span id="mensaje" name="mensaje"> </span>
 
                             <br>
                                     </div>
-                            <div class="col-md-12 form-group p_star">
-                                <input type="text" class="form-control" id="correo_usuario" name="correo_usuario" value=""
-                                       placeholder="Correo">
-                            </div>
+                           
+
                             <div class="col-md-12 form-group p_star">
                                 <input type="password" class="form-control" id="contrasenia_usuario" name="contrasenia_usuario" value=""
-                                       placeholder="Contraseña">
+                                       placeholder="Escribe una contraseña">
+                            </div>
+                            <br><br>
+                             <div class="col-md-12 form-group p_star">
+                                <input type="password" class="form-control" id="confirmar_contrasenia_usuario" name="confirmar_contrasenia_usuario" value=""
+                                       placeholder="Confirmar contraseña">
+                            </div>
+                            <div class="col-md-12 form-group p_star">
+                                <input type="hidden" class="form-control" id="correo_usuario" name="correo_usuario" value="<?php echo $_POST["correo_usuario"] ?>"
+                                 >
                             </div>
                             <div class="col-md-12 form-group">
-                                <div class="creat_account d-flex align-items-center">
-                                    <input type="checkbox" id="f-option" name="selector">
-                                    <label for="f-option">Recordarme</label>
-                                </div>
+                                
                                 <button type="submit" value="submit" class="btn_3">
-                                    Entrar
+                                    Confirmar
                                 </button>
-                                <a class="lost_pass" href="?controlador=Item&accion=nuevaContrasennia">Olvidé mi contraseña?</a>
                             </div>
                         </form>
                     </div>
