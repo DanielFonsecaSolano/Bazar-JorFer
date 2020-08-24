@@ -105,23 +105,18 @@ include_once 'public/header.php';
             <div class="col-lg-3 offset-lg-1">
                 <div class="media contact-info">
                     <span class="contact-info__icon"><i class="ti-home"></i></span>
-                    <div class="media-body">
-                        <h3>Cartago, Turrialba.</h3>
-                        <p>Las Palmeras, CA 91770</p>
-                    </div>
+                    <div class="media-body direccion_general" id="direccion_general" name="direccion_general">
+                   </div>
                 </div>
                 <div class="media contact-info">
                     <span class="contact-info__icon"><i class="ti-tablet"></i></span>
-                    <div class="media-body">
-                        <h3>+506 253 565 2365</h3>
-                        <p>Lunes a Sábado 9am a 6pm</p>
+                    <div class="media-body" id="contacto_local" name="contacto_local">
                     </div>
                 </div>
                 <div class="media contact-info">
                     <span class="contact-info__icon"><i class="ti-email"></i></span>
-                    <div class="media-body">
-                        <h3>bazarjorfer@gmail.com</h3>
-                        <p>¡Envíenos su consulta en cualquier momento!</p>
+                    <div class="media-body" name="contacto_local_correo" id="contacto_local_correo">
+                      
                     </div>
                 </div>
             </div>
