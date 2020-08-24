@@ -26,9 +26,21 @@ $(document).ready(function () {
 
         }
     });
+      $.ajax({
+        type: 'POST',
+        url: "?controlador=Item&accion=listar_telefono",
+        success: function (response) {
+             console.log(response);
+            $.each(JSON.parse(response), function (i, item) {
+                $("#contact-now").append(" <li>  <i class='fas fa-phone'></i> + " + item.telefono_celular + "</li> ");
+            });
+
+        }
+    });
     registrar_usuario();
     autenticacion_usuario();
     confirmar_contrasennia();
+    autenticacion_usuario_admin();
 
 });
 
@@ -150,6 +162,7 @@ var autenticacion_usuario = function () {
 
         var correo_usuario = document.getElementById("correo_usuario");
         var contrasenia_usuario = document.getElementById("contrasenia_usuario");
+        var id_rol = document.getElementById("id_rol");
         var mensaje_error = [];
         var error = document.getElementById("error2");
         error.style.color = 'red';
@@ -173,7 +186,47 @@ var autenticacion_usuario = function () {
         if (mensaje_error.length === 0) {
             document.getElementById("contrasenia_usuario").value = SHA512(contrasenia_usuario);
 
-            window.location.href = "?controlador=Item&accion=autenticacion_usuario&contrasenia_usuario=" + contrasenia_usuario.value + "&correo_usuario=" + correo_usuario.value;
+            window.location.href = "?controlador=Item&accion=autenticacion_usuario&contrasenia_usuario=" +
+                    contrasenia_usuario.value + "&correo_usuario=" + correo_usuario.value+"&id_rol="+id_rol.value;
+        }
+        error.innerHTML = mensaje_error.join(', ') + '\n';
+
+    });
+};
+
+
+var autenticacion_usuario_admin = function () {
+    $("#autenticacion_usuario_admin").on('submit', function (e) {
+        e.preventDefault();
+
+        var correo_usuario = document.getElementById("correo_usuario");
+        var contrasenia_usuario = document.getElementById("contrasenia_usuario");
+        var id_rol = document.getElementById("id_rol");
+        var mensaje_error = [];
+        var error = document.getElementById("error2");
+        error.style.color = 'red';
+
+        if (correo_usuario.value === null || correo_usuario.value === '') {
+            mensaje_error.push('Ingrese su correo eléctronico');
+        }
+        if (/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i.test(correo_usuario.value)) {
+            salida = true;
+        } else {
+            mensaje_error.push('Ingrese un correo electrónico válido');
+        }
+        if (contrasenia_usuario.value === null || contrasenia_usuario.value === '' || contrasenia_usuario.value.length < 5) {
+            mensaje_error.push('Ingrese una contraseña válida');
+        }
+
+        if (contrasenia_usuario.value.length > 30) {
+            mensaje_error.push('La contraseña excedió el número de caracteres permitidos');
+        }
+
+        if (mensaje_error.length === 0) {
+            document.getElementById("contrasenia_usuario").value = SHA512(contrasenia_usuario);
+
+            window.location.href = "?controlador=Item&accion=autenticacion_usuario_admin&contrasenia_usuario=" +
+                    contrasenia_usuario.value + "&correo_usuario=" + correo_usuario.value+"&id_rol="+id_rol.value;
         }
         error.innerHTML = mensaje_error.join(', ') + '\n';
 

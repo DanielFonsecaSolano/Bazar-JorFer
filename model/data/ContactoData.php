@@ -36,6 +36,14 @@ class ContactoData {
         return $resultado;
     }
     
+      public function listar_telefono() {
+       $consulta = $this->db->prepare('Select telefono_celular  from contacto ');
+       $consulta->execute();
+        $resultado = $consulta->fetchAll();
+        $consulta->CloseCursor();
+        return $resultado;
+    }
+    
       public function listar_direccion() {
        $consulta = $this->db->prepare('call sp_listar_direccion ');
        $consulta->execute();

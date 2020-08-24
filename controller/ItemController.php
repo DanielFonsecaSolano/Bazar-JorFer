@@ -30,7 +30,9 @@ class ItemController {
     public function loginView() {
         $this->view->show("Item/login.php");
     }
-
+   public function login_Admin() {
+        $this->view->show("Item/login_Admin.php");
+    }
     public function sobreNosotrosView() {
         $this->view->show("Item/SobreNosotros.php");
     }
@@ -64,6 +66,11 @@ class ItemController {
         $PD = new ContactoData();
         echo json_encode($PD->listar_direccion());
     }
+     public function listar_telefono() {
+        require 'model/data/ContactoData.php';
+        $PD = new ContactoData();
+        echo json_encode($PD->listar_telefono());
+    }
      public function listar_correo_existente() {
         require 'model/data/ContactoData.php';
         $PD = new ContactoData();
@@ -92,9 +99,9 @@ class ItemController {
         require 'model/data/UsuarioData.php';
         $usuario = new UsuarioData();
         $clave = ($_GET['contrasenia_usuario']);
-        //  $clave= $this->encripto($_GET['contrasenia_usuario']);
+        $tipo_rol=$_GET['id_rol'];
         if (isset($clave, $_GET['correo_usuario'])) {
-            $autenticacion = $usuario->autenticacion_usuario($clave, $_GET['correo_usuario']);
+            $autenticacion = $usuario->autenticacion_usuario($clave, $_GET['correo_usuario'],$tipo_rol);
             if ($autenticacion > 0) {
                 session_start();
                 if (!isset($_SESSION['usuario'])) {
@@ -110,14 +117,36 @@ class ItemController {
             $this->view->show("Item/login.php");
         }
     }
+    public function autenticacion_usuario_admin() {
+        require 'model/data/UsuarioData.php';
+        $usuario = new UsuarioData();
+        $clave = ($_GET['contrasenia_usuario']);
+        $tipo_rol=$_GET['id_rol'];
+        if (isset($clave, $_GET['correo_usuario'])) {
+            $autenticacion = $usuario->autenticacion_usuario($clave, $_GET['correo_usuario'],$tipo_rol);
+            if ($autenticacion > 0) {
+                session_start();
+                if (!isset($_SESSION['usuario'])) {
+                    $_SESSION['usuario'] = '';
+                }
+                $_SESSION['usuario'] = $_GET['correo_usuario'];
+                $this->view->show("Admin/MenuPrincipal.php");
+            } else {
+                echo $this->enviar_mensaje("Correo y/o contraseña inválida", "Advertencia", "error2");
+               $this->view->show("Item/login_admin.php");
+            }
+        } else {
+            $this->view->show("Item/login_admin.php");
+        }
+    }
 
     public function cerrar_sesion() {
         session_start();
         if (session_destroy()) {
-            print "Sesión destruida correctamente Cliente";
+         //   print "Sesión destruida correctamente Cliente";
             session_unset();
         } else {
-            print "Error al destruir la sesión Cliente";
+          //  print "Error al destruir la sesión Cliente";
         }
         $this->view->show("Item/login.php");
     }

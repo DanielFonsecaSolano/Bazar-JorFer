@@ -47,7 +47,7 @@
                 if ($_SESSION['usuario'] == null || $_SESSION['usuario'] == "") {
                     echo '<div class="alert alert-danger" role="alert">
                           Usted no tiene PERMISOS!
-                         <center>   <a href="?controlador=Item&accion=loginView">Iniciar Session nuevamente</a></center>
+                           <center>   <a href="?controlador=Item&accion=login_Admin">Iniciar Session nuevamente</a></center>
            
                            </div>';
                     //Sessions are not available
@@ -112,7 +112,7 @@
                                             </a>
                                             <div class="dropdown-menu" >
                                                 <a class="dropdown-item" href="?controlador=Item&accion=cerrar_sesion">
-                                                   <i class="fas fa-sign-in-alt"></i> Cerrar mi sesión</a>
+                                                    <i class="fas fa-sign-in-alt"></i> Cerrar mi sesión</a>
                                             </div>
                                         </div>
 
