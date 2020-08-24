@@ -23,8 +23,8 @@ class UsuarioData {
         $this->db = SPDO::singleton();
     }
 
-    public function autenticacion_usuario($contrasenia_usuario, $correo_usuario) {
-      $sql = 'CALL sp_autenticacion_usuario("' . $contrasenia_usuario . '", "' . $correo_usuario . '")';
+    public function autenticacion_usuario($contrasenia_usuario, $correo_usuario,$tipo_rol) {
+      $sql = 'CALL sp_autenticacion_usuario("' . $contrasenia_usuario . '", "' . $correo_usuario . '",  "'.$tipo_rol.'")';
         $del = $this->db->prepare($sql);
         if ($del->execute()) {
             $count = $del->fetch();

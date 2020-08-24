@@ -37,11 +37,11 @@ include_once 'public/header.php';
             <div class="col-lg-6 col-md-6">
                 <div class="login_part_form">
                     <div class="login_part_form_iner">
-                        <h4><center>Iniciar sesion !</center>  </h4>
+                        <h4><center>Iniciar sesion como administrador</center>  </h4>
 
-                        <form class="row contact_form" id="autenticacion_usuario" method="post" autocomplete="off" 
+                        <form class="row contact_form" id="autenticacion_usuario_admin" method="post" autocomplete="off" 
                               enctype="multipart/form-data"> 
-                          
+                          <br>
                             <div class="col-md-12 form-group p_star">
                                 <span id="error2" name="error2" style="color:red"> </span>
 
@@ -56,9 +56,10 @@ include_once 'public/header.php';
                                 <input type="password" class="form-control" id="contrasenia_usuario" name="contrasenia_usuario" value=""
                                        placeholder="Contraseña">
                             </div>
-                                <div class="col-md-12 form-group p_star">
-                                 <input type="hidden" class="form-control" id="id_rol" name="id_rol" value="2"
+                             <div class="col-md-12 form-group p_star">
+                                 <input type="hidden" class="form-control" id="id_rol" name="id_rol" value="1"
                                        >
+                            </div>
                             <div class="col-md-12 form-group">
                                 <div class="creat_account d-flex align-items-center">
                                     <input type="checkbox" id="f-option" name="selector">
@@ -67,9 +68,13 @@ include_once 'public/header.php';
                                 <button type="submit" value="submit" class="btn_3">
                                     Entrar
                                 </button>
-                                <a class="lost_pass" href="?controlador=Item&accion=login_Admin"><i class="fas fa-user"></i> Iniciar Como administrador</a>
-                         
+                                
+                                <a class="lost_pass" href="?controlador=Item&accion=loginView"><i class="fas fa-user"></i> Iniciar Como Usuario</a>
+                         <br>
                                 <a class="lost_pass" href="?controlador=Item&accion=nuevaContrasennia"><i class="fas fa-unlock"></i> Olvidé mi contraseña?</a>
+                           
+                                
+                                
                             </div>
                         </form>
                     </div>

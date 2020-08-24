@@ -75,8 +75,9 @@
                                                 </div>
                                             </form>
                                         </div>
-                                        <ul class="contact-now">     
-                                            <li><i class="fas fa-phone"></i> +506 8765 3456</li>
+                                       
+                                        <ul class="contact-now" id="contact-now" name="contact-now">     
+                                         
                                         </ul>
                                     </div>
                                     <div class="header-info-right">
@@ -95,7 +96,8 @@
                                 <!-- Logo -->
                                 <div class="col-xl-1 col-lg-1 col-md-1 col-sm-3">
                                     <div class="logo">
-                                        <a href="?controlador=Item&accion=inicioView"><img src="./public/img/logo/logo.png" alt=""></a>
+                                        <a href="?controlador=Item&accion=inicioView">
+                                            <img src="./public/img/logo/logo.png" alt=""></a>
                                     </div>
                                 </div>
                                 <div class="col-xl-6 col-lg-8 col-md-7 col-sm-5">
@@ -135,7 +137,9 @@
                                             </div>
                                         </li>
                                      
-                                        <li class="d-none d-lg-block"> <a href="?controlador=Item&accion=registrarmeView" class="btn header-btn">Registrarme</a></li>
+                                        <li class="d-none d-lg-block"> 
+                                            <a href="?controlador=Item&accion=registrarmeView" class="btn header-btn">
+                                              Registrarme</a></li>
                                     </ul>
                                 </div>
                                 <!-- Mobile Menu -->
