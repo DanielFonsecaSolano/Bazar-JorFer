@@ -11,7 +11,7 @@
  *
  * @author dfonse
  */
-class InformacionDato {
+class InformacionData {
 
     protected $db;
 
@@ -20,25 +20,19 @@ class InformacionDato {
         $this->db = SPDO::singleton();
     }
 
- 
-
-        public function modificarInformacion($idInformacion,$horario,$numeroTelefonico, $correoElectronico,$acercaDeNosotros) {
-        $data = array($idInformacion,$horario, $numeroTelefonico, $correoElectronico,$acercaDeNosotros);
-        $consulta = $this->db->prepare('CALL modificarInformacion(?,?,?,?) ');
+    public function modificarInformacion($idInformacion, $horario, $numeroTelefonico, $correoElectronico, $acercaDeNosotros) {
+        $data = array($idInformacion, $horario, $numeroTelefonico, $correoElectronico, $acercaDeNosotros);
+        $consulta = $this->db->prepare('CALL sp_modificar_informacion(?,?,?,?) ');
         $consulta->execute($data);
         echo $consulta->errorInfo()[2];
     }
 
-
     public function listarInformacion() {
-        $consulta = $this->db->prepare('CALL listarInformacion()');
-         $consulta->execute();
+        $consulta = $this->db->prepare('call sp_listar_informacion(1) ');
+        $consulta->execute();
         $resultado = $consulta->fetchAll();
         $consulta->CloseCursor();
         return $resultado;
     }
 
-
-
 }
-

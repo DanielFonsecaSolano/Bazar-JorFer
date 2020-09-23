@@ -26,7 +26,7 @@
                         <div class="footer-tittle">
                             <h4>Quick Links</h4>
                             <ul>
-                                <li><a href="#">About</a></li>
+                                <li><a href="?controlador=Informacion&accion=listarInformacion">Sobre Nosotros</a></li>
                                 <li><a href="#"> Offers & Discounts</a></li>
                                 <li><a href="#"> Get Coupon</a></li>
                                 <li><a href="#">  Contact Us</a></li>
